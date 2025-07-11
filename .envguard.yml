@@ -1,0 +1,7 @@
+terraform:
+  dir: ../akamai/secure_www.mathworks.com_pm
+  enabled: true
+
+output:
+  format: json
+  failOnSeverity: warning

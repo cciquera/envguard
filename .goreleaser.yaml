@@ -1,0 +1,37 @@
+project_name: envguard
+
+builds:
+- id: envguard
+  main: ./main.go
+  binary: envguard
+  goos:
+  - linux
+  - darwin
+  - windows
+  goarch:
+  - amd64
+  - arm64
+  ldflags:
+  - -s -w -X main.version={{.Version}}
+
+archives:
+- format: tar.gz
+  name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+  files:
+  - LICENSE
+  - README.md
+  - .envguard.yml
+  - envguard
+
+checksum:
+  name_template: "checksums.txt"
+
+release:
+  github:
+    owner: your-github-username
+    name: envguard
+  draft: true
+  prerelease: false
+
+changelog:
+  use: git
