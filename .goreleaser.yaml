@@ -27,7 +27,7 @@ checksum:
 
 release:
   github:
-    owner: your-github-username
+    owner: cciquera
     name: envguard
   draft: true
   prerelease: false
