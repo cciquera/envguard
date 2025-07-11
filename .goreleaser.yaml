@@ -21,7 +21,6 @@ archives:
   - LICENSE
   - README.md
   - .envguard.yml
-  - envguard
 
 checksum:
   name_template: "checksums.txt"
